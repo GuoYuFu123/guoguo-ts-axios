@@ -1,0 +1,17 @@
+# packages node_modules dist
+node_modules/
+packages/**/node_modules/
+packages/**/dist/
+
+#.DS_Store
+.DS_Store
+
+# sdk coverage 
+packages/sdk/coverage/*
+#sdk lib
+packages/sdk/lib/*
+
+
+# .yarnrc
+.yarnrc
+

@@ -1,0 +1,14 @@
+.root {
+  .rootTest {
+    display: flex;
+
+    .left {
+      width: 200px;
+      border-right: 6px dotted #ccc;
+    }
+
+    .right {
+      flex: 1;
+    }
+  }
+}

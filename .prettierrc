@@ -1,0 +1,8 @@
+{
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "arrowParens": "avoid"
+  }
+  
