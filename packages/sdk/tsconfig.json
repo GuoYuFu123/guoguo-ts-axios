@@ -8,11 +8,12 @@
     "allowUnusedLabels": false,
     "declarationMap": true,
     "esModuleInterop": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": true
     // "noUnusedLocals": true,
     // "noUnusedParameters": true,
     // "pretty": true,
     // "sourceMap": true,
     // "strict": true
-  }
+  },
+  "include": ["src"]
 }

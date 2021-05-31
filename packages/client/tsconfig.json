@@ -11,8 +11,7 @@
     "lib": ["esnext", "dom"],
     "types": ["vite/client"],
     "noUnusedLocals": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": false
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+    "noImplicitReturns": true
+    // "noImplicitAny": false
+  }
 }
