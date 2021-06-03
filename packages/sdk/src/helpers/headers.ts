@@ -40,7 +40,7 @@ export function processHeaders(headers: any, data: any): any {
     content-type: application/json; charset=utf-8
  */
 export function parseHeaders(headers: string): any {
-  let parsed: Record<string, string> = {};
+  const parsed: Record<string, string> = {};
 
   if (!headers) {
     return parsed;

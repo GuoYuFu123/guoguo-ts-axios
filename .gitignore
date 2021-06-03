@@ -10,8 +10,11 @@ packages/**/dist/
 packages/sdk/coverage/*
 #sdk lib
 packages/sdk/lib/*
+#docs
+packages/sdk/docs/*
 
 
 # .yarnrc
 .yarnrc
+
 

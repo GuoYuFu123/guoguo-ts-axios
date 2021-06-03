@@ -1,0 +1,7 @@
+{
+  "name": "guoguo-ts-axios",
+  "entryPoints": ["src"],
+  "out": "docs",
+  "theme": "default",
+  "readme": "../../README.md"
+}

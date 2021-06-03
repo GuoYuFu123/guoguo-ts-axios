@@ -30,7 +30,7 @@ export function buildURL(
   } else {
     const parts: string[] = [];
     Object.keys(params).forEach(key => {
-      let val = params[key];
+      const val = params[key];
       // 判空
       //https://stackoverflow.com/questions/10790300/should-i-use-typeofval-undefined-or-val-undefined
       if (val === null || typeof val === 'undefined') {

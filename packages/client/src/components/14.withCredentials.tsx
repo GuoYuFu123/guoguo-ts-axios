@@ -6,10 +6,22 @@ export default defineComponent({
   setup: () => {
     document.cookie = 'a=oeschger';
     document.cookie = 'b=tripe';
-    axios.get('/api/axios/base/get').catch(function (e) {});
+    // axios.get('/api/axios/base/get').catch(function (e) {});
+
+    // axios.post(
+    //   'http://localhost:3060/api/question/sendLog',
+    //   {
+    //     source: 'question',
+    //     key: 'axios',
+    //     value: 123,
+    //   },
+    //   {
+    //     withCredentials: true,
+    //   },
+    // );
 
     axios.post(
-      'http://a.fgy:3060/api/question/sendLog',
+      'http://b.fuguoyu:3060/api/question/sendLog',
       {
         source: 'question',
         key: 'axios',
@@ -19,28 +31,40 @@ export default defineComponent({
         withCredentials: true,
       },
     );
-    axios.post(
-      'http://b.fgy:3060/api/question/sendLog',
-      {
-        source: 'question',
-        key: 'axios',
-        value: 123,
-      },
-      {
-        withCredentials: true,
-      },
-    );
-    axios.post(
-      'http://a.fuguoyu:3060/api/question/sendLog',
-      {
-        source: 'question',
-        key: 'axios',
-        value: 123,
-      },
-      {
-        withCredentials: true,
-      },
-    );
+
+    // axios.post(
+    //   'http://fgy.com/api/question/sendLog',
+    //   {
+    //     source: 'question',
+    //     key: 'axios',
+    //     value: 123,
+    //   },
+    //   {
+    //     withCredentials: true,
+    //   },
+    // );
+    // axios.post(
+    //   'http://b.fgy:3060/api/question/sendLog',
+    //   {
+    //     source: 'question',
+    //     key: 'axios',
+    //     value: 123,
+    //   },
+    //   {
+    //     withCredentials: true,
+    //   },
+    // );
+    // axios.post(
+    //   'http://a.fuguoyu:3060/api/question/sendLog',
+    //   {
+    //     source: 'question',
+    //     key: 'axios',
+    //     value: 123,
+    //   },
+    //   {
+    //     withCredentials: true,
+    //   },
+    // );
     // axios.post(
     //   'http://localhost:3060/api/question/sendLog',
     //   {

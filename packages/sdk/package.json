@@ -10,7 +10,9 @@
     "build": "rollup -c ./build/rollup.config.js",
     "test": "jest",
     "test:w": "jest --watch",
-    "test:c": "jest --coverage"
+    "test:c": "jest --coverage",
+    "docs": "typedoc",
+    "docs:shell":"typedoc --out docs --target es6 --theme minimal"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -27,6 +29,7 @@
     "rollup": "^2.45.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^26.5.4",
+    "typedoc": "^0.20.36",
     "xmlhttprequest": "^1.8.0"
   }
 }

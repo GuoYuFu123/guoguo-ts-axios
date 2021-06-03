@@ -86,7 +86,7 @@ export interface AxiosResponse<T = any> {
 }
 
 // 返回的promise
-export interface AxiosPromise<T = any> extends Promise<AxiosResponse<T>> {}
+export type AxiosPromise<T = any> = Promise<AxiosResponse<T>>
 
 // error
 export interface AxiosError extends Error {
