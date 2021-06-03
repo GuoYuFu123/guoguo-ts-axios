@@ -11,7 +11,9 @@
     "dev": "lerna run --parallel dev",
     "lint": "yarn lint:es && yarn lint:style",
     "lint:es": "eslint --no-error-on-unmatched-pattern \"{packages,pages}/**/src/**/*.{js,vue,ts,tsx}\"",
-    "lint:style": "stylelint --allow-empty-input \"{packages}/**/src/**/*.{vue,css,scss}\""
+    "lint:style": "stylelint --allow-empty-input \"{packages}/**/src/**/*.{vue,css,scss}\"",
+    "pre-commit": "lint-staged",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^12.1.4",
@@ -29,5 +31,20 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "lint-staged": {
+    "*.{js,vue,ts,tsx}": [
+      "eslint --no-error-on-unmatched-pattern --fix"
+    ],
+    "*.{css,scss}": [
+      "stylelint --allow-empty-input --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit",
+      "commit-msg": "yarn commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "yarn gitlint branch"
+    }
   }
 }
