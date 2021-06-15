@@ -5,7 +5,7 @@ export default defineComponent({
   setup: () => {
     axios({
       method: 'get',
-      url: 'api/axios/base/get',
+      url: 'api/axios/base/get?test=666#hash',
       params: {
         a: 'guoguo',
         b: [1, 2],

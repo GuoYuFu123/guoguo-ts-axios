@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
+// import router from './router';
+// import App from './views/guoguo-axios'
 import App from './App'
-
-createApp(App).mount('#app')
+import router from './router'
+// 
+createApp(App).use(router).mount('#app')

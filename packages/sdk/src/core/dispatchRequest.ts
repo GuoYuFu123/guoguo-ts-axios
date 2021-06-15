@@ -30,7 +30,11 @@ function processConfig(config: AxiosRequestConfig): void {
   config.headers = flattenHeaders(config.headers, config.method!);
   config.headers = transformHeaders(config);
   // config.data = transformRequestData(config);
-  config.data = transform(config.data, config.headers, config.transformRequest!);
+  config.data = transform(
+    config.data,
+    config.headers,
+    config.transformRequest!,
+  );
 }
 
 // 转换，构建url

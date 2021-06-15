@@ -36,6 +36,7 @@ export class AxiosController {
 
   @Get('headers/get')
   headersGet(@Req() req) {
+    console.log('request.cookies', req.cookies);
     return req.headers;
   }
 }

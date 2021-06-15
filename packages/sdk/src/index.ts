@@ -9,7 +9,7 @@ import Cancel, { isCancel } from './cancel/Cancel';
 export * from './types';
 
 function createInstance(config: AxiosRequestConfig): AxiosStatic {
-  // @ts-ignore
+  // eslint-disable-next-line prefer-spread
   const context = new Axios(config);
 
   const instance = Axios.prototype.request.bind(context);
@@ -37,6 +37,7 @@ axios.all = function all(promise) {
 // 接收一个函数，让函数去处理参数,其实就是解构参数
 axios.spread = function spread(callback) {
   return function wrap(arr) {
+    // eslint-disable-next-line prefer-spread
     return callback.apply(null, arr);
   };
 };
