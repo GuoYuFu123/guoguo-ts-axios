@@ -5,7 +5,7 @@ import axios from 'guoguo-ts-axios/src';
 export default defineComponent({
   setup: () => {
     // 模拟服务端动态种cookie
-    document.cookie = 'XSRF-TOKEN=abcde12345';
+    document.cookie = 'XSRF-TOKEN1=abcde12345';
 
     axios
       .get('/api/axios/base/get', {

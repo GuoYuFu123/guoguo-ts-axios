@@ -12,12 +12,6 @@ async function bootstrap() {
   app.enableCors({
     credentials: true,
     origin: true,
-    // origin: [
-    //   'http://localhost:3000',
-    //   'http://127.0.0.1:3000',
-    //   'http://10.253.28.233:3000',
-    //   'http://www.a.fuguoyu.com'
-    // ],
     methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: [
       'Content-Type',

@@ -34,7 +34,7 @@ describe('extend instance', () => {
     const res = await axios.options<Res>(
       `${BASE_URL}/api/axios/extend/options`,
     );
-    expect(res.data.status).toBe(200);
+    expect(res.data.status).toBeUndefined();
   });
 
   it('should axios.delete', async () => {
