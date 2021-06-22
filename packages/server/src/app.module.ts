@@ -3,7 +3,7 @@ import { ApiModule } from './api/api.module';
 
 @Module({
   imports: [
-    ApiModule
+    ApiModule,
   ]
 })
 export class AppModule {}

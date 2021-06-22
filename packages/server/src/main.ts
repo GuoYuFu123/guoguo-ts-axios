@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import { TransformInterceptor } from './interceptor/transform.interceptor';
+import { HttpExceptionFilter } from './filters/http-exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -24,6 +25,7 @@ async function bootstrap() {
   });
 
   app.use(cookieParser());
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new TransformInterceptor());
 
   await app.listen(3090, () => {
