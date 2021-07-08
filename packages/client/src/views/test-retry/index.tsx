@@ -35,7 +35,7 @@ export default defineComponent({
     axios({
       url: 'api/axios/base/get',
       params: { a: 1 },
-      timeout: 200, // 拦截器
+      retryDelay: 3000, // 拦截器
       retryTimes: 3, //拦截器
     }).then(res => {
       console.log(res);
