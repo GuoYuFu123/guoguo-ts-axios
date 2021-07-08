@@ -34,12 +34,12 @@ const defaults: AxiosRequestConfig = {
     return status >= 200 && status < 300;
   },
 
-  adapter: function(config:AxiosRequestConfig) : AxiosPromise<any>{
-     let defaultAdapter: (config: AxiosRequestConfig)=>AxiosPromise<any>;
+  adapter: function(config:AxiosRequestConfig) : AxiosPromise<unknown>{
+     let defaultAdapter: (config: AxiosRequestConfig)=>AxiosPromise<unknown>;
     
     if (XMLHttpRequest !== undefined) {
       defaultAdapter = xhr
-    }
+    } 
     return defaultAdapter(config);
   }
 };

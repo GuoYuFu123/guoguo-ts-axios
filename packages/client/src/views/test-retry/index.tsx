@@ -32,6 +32,15 @@ export default defineComponent({
         return axios(config);
       });
     });
+    axios({
+      url: 'api/axios/base/get',
+      params: { a: 1 },
+      timeout: 200, // 拦截器
+      retryTimes: 3, //拦截器
+    }).then(res => {
+      console.log(res);
+    });
+
 
     // 2、 通过适配器进行
     function retryAdapterEnhancer(adapter, options) {
@@ -65,8 +74,6 @@ export default defineComponent({
     axios({
       url: 'api/axios/base/get',
       params: { a: 1 },
-      timeout: 200, // 拦截器
-      retryTimes: 3, //拦截器
       adapter: retryAdapterEnhancer(axios.defaults.adapter, {
         times: 3,
         delay: 3000,
