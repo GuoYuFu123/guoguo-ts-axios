@@ -22,6 +22,7 @@ import BaseValidDateStatus from '../../components/18.validateStatus';
 import BaseParams from '../../components/19.parseParams';
 import BaseUrl from '../../components/20.base-url';
 import BaseSpreadAll from '../../components/21.all-spread';
+import BaseAdapter from '../../components/22.adapter';
 import GuoguoAxios from '../../components/guoguo-ts-axios';
 
 import classes from './index.module.scss';
@@ -120,9 +121,14 @@ const testList: Array<{ key: string; component: Component }> = [
     component: BaseSpreadAll,
   },
   {
+    key: 'base adapter',
+    component: BaseAdapter,
+  },
+  {
     key: 'guoguo-axios',
     component: GuoguoAxios,
   },
+ 
 ];
 
 export default defineComponent({

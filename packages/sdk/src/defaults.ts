@@ -1,6 +1,7 @@
+import xhr from './core/xhr';
 import { transformRequest, transformResponse } from './helpers/data';
 import { processHeaders } from './helpers/headers';
-import { AxiosRequestConfig } from './types';
+import { AxiosPromise, AxiosRequestConfig } from './types';
 
 const defaults: AxiosRequestConfig = {
   method: 'get',
@@ -32,6 +33,15 @@ const defaults: AxiosRequestConfig = {
   validateStatus: function validateStatus(status) {
     return status >= 200 && status < 300;
   },
+
+  adapter: function(config:AxiosRequestConfig) : AxiosPromise<any>{
+     let defaultAdapter: (config: AxiosRequestConfig)=>AxiosPromise<any>;
+    
+    if (XMLHttpRequest !== undefined) {
+      defaultAdapter = xhr
+    }
+    return defaultAdapter(config);
+  }
 };
 
 const methodsNoData = ['delete', 'get', 'head', 'options'];

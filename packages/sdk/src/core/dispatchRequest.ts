@@ -1,17 +1,21 @@
 import { AxiosPromise, AxiosRequestConfig, AxiosResponse } from '../types';
-import xhr from './xhr';
+// import xhr from './xhr';
 import { buildURL, combineURL, isAbsoluteURL } from '../helpers/url';
 // import { transformRequest, transformResponse } from '../helpers/data';
 import { processHeaders } from '../helpers/headers';
 import { flattenHeaders } from '../utils';
 import transform from './transform';
+import defaults from '../defaults';
 
 export default function dispatchRequest(
   config: AxiosRequestConfig,
 ): AxiosPromise {
   throwIfCancellationRequested(config);
   processConfig(config);
-  return xhr(config).then(
+
+  const adapter = config.adapter || defaults.adapter;
+
+  return adapter(config).then(
     res => {
       return transformResponseData(res);
     },

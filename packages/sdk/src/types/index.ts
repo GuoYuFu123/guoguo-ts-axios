@@ -37,6 +37,8 @@ export interface AxiosRequestConfig {
 
   baseUrl?: string;
 
+  adapter?: (config: AxiosRequestConfig)=>AxiosPromise<any>;
+
   [propName: string]: any;
 }
 
